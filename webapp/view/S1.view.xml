@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="case1fe.controller.S1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+        titleAlignment="Center"
+    >
+        <VBox
+            alignItems="Center"
+            width="auto"
+            class="sapUiResponsiveMargin"
+        >
+            <HBox>
+                <!-- <Label text="{i18n>customerId}" /> -->
+                <Input
+                    id="custId"
+                    placeholder="Enter Customer ID"
+                />
+                <!-- <Label text="{i18n>salesOrderNum}" /> -->
+                <Input
+                    id="salesOrderInput"
+                    placeholder="Enter Order Number"
+                />
+            </HBox>
+        </VBox>
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm
+                id="SimpleFormDisplay354"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="Address"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                width="auto"
+                singleContainerFullSize="true"
+            >
+                <f:content>
+                    <Label text="{i18n>custName}" />
+                    <Input
+                        id="name"
+                        placeholder="Customer Name"
+                    />
+                    <Label text="{i18n>address}." />
+                    <Input placeholder="Street" />
+                    <Input placeholder="HouseNumber">
+                        <layoutData>
+                            <l:GridData span="XL1 L2 M2 S4" />
+                        </layoutData>
+                    </Input>
+                    <Label text="{i18n>address2}" />
+                    <Input placeholder="City">
+                        <layoutData>
+                            <l:GridData span="XL1 L2 M2 S4" />
+                        </layoutData>
+                    </Input>
+                    <Input placeholder="State" />
+                    <Input placeholder="Zip" />
+
+                    <Label text="{i18n>country}" />
+                    <Input placeholder="Country" />
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button
+                        type="Emphasized"
+                        text="Submit"
+                        press="onPress"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
