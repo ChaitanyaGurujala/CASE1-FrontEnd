@@ -29,6 +29,11 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /odata
+            url: https://fd01d622trial-dev-case1be-srv.cfapps.us10-001.hana.ondemand.com/
+            destination: case1be
+            authenticationType: OAuth2JWTBearer
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:

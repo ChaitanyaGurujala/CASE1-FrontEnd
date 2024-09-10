@@ -15,6 +15,11 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        backend:
+          - path: /odata
+            url: https://fd01d622trial-dev-case1be-srv.cfapps.us10-001.hana.ondemand.com/
+            destination: case1be
+            authenticationType: OAuth2JWTBearer
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
